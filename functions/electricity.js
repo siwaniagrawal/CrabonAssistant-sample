@@ -33,6 +33,7 @@ exports.processRequest = function(conv, parameters) {
 
         requestLib(options, function(error, response, body) {
             const emissionResponse = "The emissions released due to this action are given below";
+            const button = "electricity";
             if (!error && response.statusCode === 200) {
                 console.log(body);
                 if (parameters.emission_type !== "") {
@@ -53,13 +54,12 @@ exports.processRequest = function(conv, parameters) {
                     else
                         finalResponseString = basicResponseString + ' are ' + emission;
 
-
                     let unit = body.unit;
                     if (unit !== undefined) {
-                        utils.richResponse(conv, finalResponseString + ' ' + unit, emissionResponse);
+                        utils.richResponse(conv, finalResponseString + ' ' + unit, emissionResponse, button);
                         resolve();
                     } else {
-                        utils.richResponse(conv, finalResponseString + ' kg', emissionResponse);
+                        utils.richResponse(conv, finalResponseString + ' kg', emissionResponse,button);
                         resolve();
                     }
                 } else {
@@ -76,7 +76,7 @@ exports.processRequest = function(conv, parameters) {
                         'Carbon Dioxide: ' + carbonEmission + ' kg.\n' +
                         "Nitrous Oxide: " + nitrousEmission + ' kg.\n' +
                         "Methane: " + methaneEmission + ' kg.';
-                    utils.richResponse(conv, finalResponseString, emissionResponse);
+                    utils.richResponse(conv, finalResponseString, emissionResponse, button);
                     resolve();
                 }
             } else {
