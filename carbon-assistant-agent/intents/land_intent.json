@@ -1,0 +1,55 @@
+{
+  "id": "84760a9b-3eb5-47c0-b6ef-aeb0236af95b",
+  "name": "land_intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "1c16315f-a57a-4fe0-a39c-54ed07d78a87",
+          "required": false,
+          "dataType": "@land_type",
+          "name": "land_type",
+          "value": "$land_type",
+          "isList": false
+        },
+        {
+          "id": "f81edcc0-9b22-4ee8-b882-b0325a5133fb",
+          "required": false,
+          "dataType": "@sys.geo-country",
+          "name": "land_region",
+          "value": "$land_region",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "I can\u0027t tell the net emission without knowing the region. Please tell the region you want to know the emission for."
+            },
+            {
+              "lang": "en",
+              "value": "What is the region you are looking for?"
+            },
+            {
+              "lang": "en",
+              "value": "Can you please specify the region where you want to know the emission?"
+            }
+          ],
+          "isList": false
+        }
+      ],
+      "messages": [],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1551621075,
+  "fallbackIntent": false,
+  "events": []
+}

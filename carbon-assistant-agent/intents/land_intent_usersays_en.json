@@ -1,0 +1,281 @@
+[
+  {
+    "id": "0e79145c-71fb-4a0f-8c5f-88ee82e9dad7",
+    "data": [
+      {
+        "text": "The emission in land because of ",
+        "userDefined": false
+      },
+      {
+        "text": "cropland",
+        "alias": "land_type",
+        "meta": "@land_type",
+        "userDefined": true
+      },
+      {
+        "text": " in ",
+        "userDefined": false
+      },
+      {
+        "text": "Sweden",
+        "alias": "land_region",
+        "meta": "@sys.geo-country",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "a108ef2d-8d6d-4185-b4f0-73cfab122411",
+    "data": [
+      {
+        "text": "What will be total emission  in ",
+        "userDefined": false
+      },
+      {
+        "text": "India",
+        "alias": "land_region",
+        "meta": "@sys.geo-country",
+        "userDefined": true
+      },
+      {
+        "text": " due to ",
+        "userDefined": false
+      },
+      {
+        "text": "forest land",
+        "alias": "land_type",
+        "meta": "@land_type",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1551620267
+  },
+  {
+    "id": "1edaf843-d6b6-4e86-977f-187bbb96b5c6",
+    "data": [
+      {
+        "text": "Net emission in ",
+        "userDefined": false
+      },
+      {
+        "text": "Sweden",
+        "alias": "land_region",
+        "meta": "@sys.geo-country",
+        "userDefined": true
+      },
+      {
+        "text": " due to ",
+        "userDefined": false
+      },
+      {
+        "text": "burning biomass",
+        "alias": "land_type",
+        "meta": "@land_type",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1551465577
+  },
+  {
+    "id": "12cfe47c-a1cf-4b70-b1de-5e99ac75b986",
+    "data": [
+      {
+        "text": "In ",
+        "userDefined": false
+      },
+      {
+        "text": "Sweden",
+        "alias": "land_region",
+        "meta": "@sys.geo-country",
+        "userDefined": true
+      },
+      {
+        "text": " net emission for ",
+        "userDefined": false
+      },
+      {
+        "text": "grassland",
+        "alias": "land_type",
+        "meta": "@land_type",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1551467820
+  },
+  {
+    "id": "8da998c2-5c94-465e-9175-d193b0dc42ee",
+    "data": [
+      {
+        "text": "Net removal due to ",
+        "userDefined": false
+      },
+      {
+        "text": "cropland",
+        "alias": "land_type",
+        "meta": "@land_type",
+        "userDefined": true
+      },
+      {
+        "text": " in ",
+        "userDefined": false
+      },
+      {
+        "text": "Malaysia",
+        "alias": "land_region",
+        "meta": "@sys.geo-country",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1551465577
+  },
+  {
+    "id": "cf2de5b0-698c-4d57-8da2-9a1c134e786a",
+    "data": [
+      {
+        "text": "Net emission due to ",
+        "userDefined": false
+      },
+      {
+        "text": "burning biomass",
+        "alias": "land_type",
+        "meta": "@land_type",
+        "userDefined": true
+      },
+      {
+        "text": " in the ",
+        "userDefined": false
+      },
+      {
+        "text": "United Kingdom",
+        "alias": "land_region",
+        "meta": "@sys.geo-country",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1551465577
+  },
+  {
+    "id": "45ca7c6f-54b8-46d5-b193-362cc4e9d521",
+    "data": [
+      {
+        "text": "Total emission because of  ",
+        "userDefined": false
+      },
+      {
+        "text": "grassland",
+        "alias": "land_type",
+        "meta": "@land_type",
+        "userDefined": true
+      },
+      {
+        "text": " in ",
+        "userDefined": false
+      },
+      {
+        "text": "Yemen",
+        "alias": "land_region",
+        "meta": "@sys.geo-country",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1551467820
+  },
+  {
+    "id": "320f35c1-8f80-4e02-a78f-a58caa22f5bc",
+    "data": [
+      {
+        "text": "emission for ",
+        "userDefined": false
+      },
+      {
+        "text": "burning biomass",
+        "alias": "land_type",
+        "meta": "@land_type",
+        "userDefined": true
+      },
+      {
+        "text": " in ",
+        "userDefined": false
+      },
+      {
+        "text": "China",
+        "alias": "land_region",
+        "meta": "@sys.geo-country",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1551467820
+  },
+  {
+    "id": "91350dc7-9b25-4bcc-ab10-4da01595d9e9",
+    "data": [
+      {
+        "text": "Total emission because of ",
+        "userDefined": false
+      },
+      {
+        "text": "forest land",
+        "alias": "land_type",
+        "meta": "@land_type",
+        "userDefined": true
+      },
+      {
+        "text": " in ",
+        "userDefined": false
+      },
+      {
+        "text": "Zambia",
+        "alias": "land_region",
+        "meta": "@sys.geo-country",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1551430086
+  },
+  {
+    "id": "ca35e8c5-02fb-4697-a61f-617f40349bf4",
+    "data": [
+      {
+        "text": "emission due to ",
+        "userDefined": false
+      },
+      {
+        "text": "cropland",
+        "alias": "land_type",
+        "meta": "@land_type",
+        "userDefined": true
+      },
+      {
+        "text": " in ",
+        "userDefined": false
+      },
+      {
+        "text": "India",
+        "alias": "land_region",
+        "meta": "@sys.geo-country",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1551430086
+  }
+]

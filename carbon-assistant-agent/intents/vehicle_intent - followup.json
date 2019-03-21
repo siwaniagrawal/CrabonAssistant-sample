@@ -1,0 +1,74 @@
+{
+  "id": "17df323f-da35-47a1-9a1a-1329cfd35d2c",
+  "parentId": "c53b52c6-909e-43cd-b6d4-bc6142686c70",
+  "rootParentId": "c53b52c6-909e-43cd-b6d4-bc6142686c70",
+  "name": "vehicle_intent - followup",
+  "auto": true,
+  "contexts": [
+    "vehicle_intent-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "vehicle_intent.vehicle_intent-more",
+      "affectedContexts": [
+        {
+          "name": "vehicle_intent-followup",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "id": "6bb96058-739f-4a60-b9f2-6ad631db6a5c",
+          "dataType": "@emission_type",
+          "name": "emission_type",
+          "value": "$emission_type",
+          "isList": false
+        },
+        {
+          "id": "a0dc6365-b088-4737-a988-9dc77da9d559",
+          "dataType": "@fuels",
+          "name": "fuel_type",
+          "value": "$fuel_type",
+          "isList": false
+        },
+        {
+          "id": "ce6e5271-e738-4de6-bd48-6bfd75f35b9a",
+          "dataType": "@sys.geo-city",
+          "name": "destination",
+          "value": "$destination",
+          "isList": false
+        },
+        {
+          "id": "eca30ed6-d609-45f2-8024-151b86bbb83e",
+          "dataType": "@sys.number",
+          "name": "mileage",
+          "value": "$mileage",
+          "isList": false
+        },
+        {
+          "id": "2a3a5f40-2679-449f-b30f-06c4ea27c44d",
+          "dataType": "@sys.geo-city",
+          "name": "origin",
+          "value": "$origin"
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1531045384,
+  "fallbackIntent": false,
+  "events": []
+}

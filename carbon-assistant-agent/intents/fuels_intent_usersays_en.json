@@ -1,0 +1,171 @@
+[
+  {
+    "id": "acb05ff7-1213-4bca-aad1-9e8b34581ae4",
+    "data": [
+      {
+        "text": "carbon",
+        "alias": "emission_type",
+        "meta": "@emission_type",
+        "userDefined": false
+      },
+      {
+        "text": " emissions ",
+        "userDefined": false
+      },
+      {
+        "text": "for",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "4",
+        "alias": "quantity",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": " L of ",
+        "userDefined": false
+      },
+      {
+        "text": "E 10",
+        "alias": "fuel_type",
+        "meta": "@fuels",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1528640523
+  },
+  {
+    "id": "3171a840-fd55-4970-bb43-bd7e72f2d1de",
+    "data": [
+      {
+        "text": "emissions ",
+        "userDefined": false
+      },
+      {
+        "text": "for",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "29",
+        "alias": "quantity",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": " kg ",
+        "userDefined": false
+      },
+      {
+        "text": "CNG",
+        "alias": "fuel_type",
+        "meta": "@fuels",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527422442
+  },
+  {
+    "id": "e7cf37dd-c7ce-4dec-b58d-4e15df7b485f",
+    "data": [
+      {
+        "text": "carbon",
+        "alias": "emission_type",
+        "meta": "@emission_type",
+        "userDefined": false
+      },
+      {
+        "text": " emissions ",
+        "userDefined": false
+      },
+      {
+        "text": "for",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " consumption of ",
+        "userDefined": false
+      },
+      {
+        "text": "3",
+        "alias": "quantity",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": " litres ",
+        "userDefined": false
+      },
+      {
+        "text": "Diesel",
+        "alias": "fuel_type",
+        "meta": "@fuels",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1528640523
+  },
+  {
+    "id": "2fd0cfdd-b561-4fff-9591-68dde8285516",
+    "data": [
+      {
+        "text": "emissions ",
+        "userDefined": false
+      },
+      {
+        "text": "due",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "to",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " consumption of ",
+        "userDefined": false
+      },
+      {
+        "text": "32.1",
+        "alias": "quantity",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": " Litres ",
+        "userDefined": false
+      },
+      {
+        "text": "petrol",
+        "alias": "fuel_type",
+        "meta": "@fuels",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1528640523
+  }
+]

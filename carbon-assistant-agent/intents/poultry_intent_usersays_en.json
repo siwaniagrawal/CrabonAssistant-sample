@@ -1,0 +1,267 @@
+[
+  {
+    "id": "f7b782fa-e57b-488b-9879-78beb7a060d5",
+    "data": [
+      {
+        "text": "emissions for ",
+        "userDefined": false
+      },
+      {
+        "text": "beef",
+        "alias": "poultry_type",
+        "meta": "@poultry_list",
+        "userDefined": false
+      },
+      {
+        "text": " production",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527016896
+  },
+  {
+    "id": "def9df7c-547b-407a-9231-6a05ed2a7c4d",
+    "data": [
+      {
+        "text": "carbon",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " emissions for ",
+        "userDefined": false
+      },
+      {
+        "text": "22",
+        "alias": "poultry_quantity",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": " kg ",
+        "userDefined": false
+      },
+      {
+        "text": "turkey",
+        "alias": "poultry_type",
+        "meta": "@poultry_list",
+        "userDefined": false
+      },
+      {
+        "text": " production",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1528640473
+  },
+  {
+    "id": "7ba9c8fc-975d-4d83-ae22-5dc0d9e2a14c",
+    "data": [
+      {
+        "text": "emissions for ",
+        "userDefined": false
+      },
+      {
+        "text": "10",
+        "alias": "poultry_quantity",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": " kg ",
+        "userDefined": false
+      },
+      {
+        "text": "beef",
+        "alias": "poultry_type",
+        "meta": "@poultry_list",
+        "userDefined": false
+      },
+      {
+        "text": " production",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1528640473
+  },
+  {
+    "id": "5db744f9-6f5f-478f-9982-4d164a5ab7d3",
+    "data": [
+      {
+        "text": "emissions for ",
+        "userDefined": false
+      },
+      {
+        "text": "beef",
+        "alias": "poultry_type",
+        "meta": "@poultry_list",
+        "userDefined": false
+      },
+      {
+        "text": " production in ",
+        "userDefined": false
+      },
+      {
+        "text": "idaho",
+        "alias": "poultry_region",
+        "meta": "@poultry_regions",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527016896
+  },
+  {
+    "id": "f87c7b16-bc93-4881-bf5b-d4c838727e7b",
+    "data": [
+      {
+        "text": "emissions by production of ",
+        "userDefined": false
+      },
+      {
+        "text": "5",
+        "alias": "poultry_quantity",
+        "meta": "@sys.number",
+        "userDefined": true
+      },
+      {
+        "text": " kg ",
+        "userDefined": false
+      },
+      {
+        "text": "turkey",
+        "alias": "poultry_type",
+        "meta": "@poultry_list",
+        "userDefined": false
+      },
+      {
+        "text": " meat",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527016896
+  },
+  {
+    "id": "2a16b0a8-9add-403d-bbad-c541f391af7f",
+    "data": [
+      {
+        "text": "how much emissions are caused by ",
+        "userDefined": false
+      },
+      {
+        "text": "4",
+        "alias": "poultry_quantity",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": " kg of ",
+        "userDefined": false
+      },
+      {
+        "text": "beef",
+        "alias": "poultry_type",
+        "meta": "@poultry_list",
+        "userDefined": false
+      },
+      {
+        "text": " production in ",
+        "userDefined": false
+      },
+      {
+        "text": "idaho",
+        "alias": "poultry_region",
+        "meta": "@poultry_regions",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1528640473
+  },
+  {
+    "id": "d462834a-202e-4c54-b372-38aac666316c",
+    "data": [
+      {
+        "text": "carbon",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " emissions for production of ",
+        "userDefined": false
+      },
+      {
+        "text": "3",
+        "alias": "poultry_quantity",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "eggs",
+        "alias": "poultry_type",
+        "meta": "@poultry_list",
+        "userDefined": false
+      },
+      {
+        "text": " in ",
+        "userDefined": false
+      },
+      {
+        "text": "ohio",
+        "alias": "poultry_region",
+        "meta": "@poultry_regions",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527016896
+  },
+  {
+    "id": "58e981ed-b938-4d30-b274-b4e2c803f0e3",
+    "data": [
+      {
+        "text": "carbon",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " emissions for ",
+        "userDefined": false
+      },
+      {
+        "text": "egg",
+        "alias": "poultry_type",
+        "meta": "@poultry_list",
+        "userDefined": false
+      },
+      {
+        "text": " production in ",
+        "userDefined": false
+      },
+      {
+        "text": "british columbia",
+        "alias": "poultry_region",
+        "meta": "@poultry_regions",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1527016896
+  }
+]
