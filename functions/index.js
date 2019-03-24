@@ -316,6 +316,65 @@ app.intent('land_intent', (conv, parameters) => {
     return land.processRequest(conv, parameters);
 });
 
+app.intent('reduceEmission_intent', (conv) => {
+    //google home
+    if (!conv.surface.capabilities.has('actions.capability.SCREEN_OUTPUT')){
+        conv.ask(`There are few ways following which you can help reduce carbon emission. For example, You can join a NGO or plant a tree, you can reduce your emission in daily transportation, you can reduce the emission by donating clothes or by avoiding food wastage, You can also help by reducing emission in home. Let me how you want to reduce emission and I will help you with it.`)
+    } else if(conv.surface.capabilities.has('actions.capability.SCREEN_OUTPUT')){
+    //display screens
+        conv.ask(new SimpleResponse({
+            speech: "I can help you with reducing emission in couple of fields, let me know which one you want to begin with",
+            text: "Here are couple of ways to reduce emission :-"
+        }));
+        conv.ask(new BasicCard({
+            title: '',
+            text: "**NGO**  \n  \n *You can be a member of an NGO and help the community in reducing emission* \n  \n  \n**Food** \n \n *You can reduce emission by using organic products and reducing wastage*\n \n\n **Transportation**  \n  \nYou can can reduce emission in your daily transportation by taking alternatives to driving. \n  \n  \n **Clothes and Shopping**\n \n*You can reduce emission by donating clothes and not using plastic bags*\n \n \n **Trees** \n \n *You can always reduce emission be planting trees* \n \n \n **Air Travel** \n \n *You can reduce emission in air travel by avoiding flying when possible, fly less frequently, fly shorter distances, and fly economy class.* \n \n \n **Home** \n \n *You reduce emission at home by turning off lights when not required*",
+
+            
+            buttons: [
+                {
+                 title: "Read More",
+                 openUrlAction: {
+                    url: "https://cotap.org/reduce-carbon-emissions/",
+                    urlTypeHint: "URL_TYPE_HINT_UNSPECIFIED"
+                    }
+                }
+            ]
+        }));
+    }
+        
+    
+});
+app.intent('reduceFood_intent', (conv) => {
+    //google home
+    if (!conv.surface.capabilities.has('actions.capability.SCREEN_OUTPUT')){
+        conv.ask(`meat and dairy is responsible for 14.5 percent of manmade global greenhouse gas emissions, mainly from production and processing and the methane that beef and sheep belch out. 1.Every day that you forgo meat and dairy, you can reduce your carbon footprint by 8 pounds—that’s 2,920 pounds a year. You can start by joining Meatless Mondays. 2.Buy foodstuffs in bulk when possible using your own reusable container. 3. Reduce your food waste by planning meals ahead of time, freezing the excess and reusing leftovers. 4.Compost your food waste if possible.`)
+    } else if(conv.surface.capabilities.has('actions.capability.SCREEN_OUTPUT')){
+    //display screens
+        conv.ask(new SimpleResponse({
+            speech: "meat and dairy is responsible for 14.5 percent of manmade global greenhouse gas emissions, mainly from production and processing and the methane that beef and sheep belch out",
+            text: "Here are couple of ways in which you can reduce emission due to food production and transportation:-"
+        }));
+        conv.ask(new BasicCard({
+            title: '',
+            text: "*1.* **Eat low on the food chain.**  \n  \n *This means eating mostly fruits, veggies, grains, and beans. Livestock—meat and dairy—is responsible for 14.5 percent of manmade global greenhouse gas emissions, mainly from feed production and processing and the methane that beef and sheep belch out. Every day that you forgo meat and dairy, you can reduce your carbon footprint by 8 pounds—that’s 2,920 pounds a year. You can start by joining Meatless Mondays.* \n  \n  \n**2. Choose organic and local foods that are in season.** \n \n *Transporting food from far away, whether by truck, ship, rail or plane, uses fossil fuels for fuel and for cooling to keep foods in transit from spoiling.*\n \n\n **3. Buy foodstuffs in bulk**  \n  \n*Buy food products in bulk when possible using your own reusable container.* \n  \n  \n **4. Reduce Waste**\n \n*Reduce your food waste by planning meals ahead of time, freezing the excess and reusing leftovers.*\n \n \n **5. Compost** \n \n *Compost your food waste if possible.*",
+
+            
+            buttons: [
+                {
+                 title: "Read More",
+                 openUrlAction: {
+                    url: "http://www.greeneatz.com/foods-carbon-footprint.html",
+                    urlTypeHint: "URL_TYPE_HINT_UNSPECIFIED"
+                    }
+                }
+            ]
+        }));
+    }
+        
+    
+});
+
 
 // The default fallback intent has been matched, try to recover (https://dialogflow.com/docs/intents#fallback_intents)
 app.intent('Default Fallback Intent', (conv) => {
