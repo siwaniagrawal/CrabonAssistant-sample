@@ -17,6 +17,7 @@ var poultry = require('./poultry');
 var appliances = require('./appliances');
 var trains = require('./trains');
 var land = require('./land');
+var trees = require('./trees');
 
 const app = dialogflow({
     debug: true
@@ -316,7 +317,9 @@ app.intent('land_intent', (conv, parameters) => {
     return land.processRequest(conv, parameters);
 });
 
-
+app.intent('tree_intent', (conv, parameters) => {
+    return tree.processRequest(conv, parameters);
+});
 // The default fallback intent has been matched, try to recover (https://dialogflow.com/docs/intents#fallback_intents)
 app.intent('Default Fallback Intent', (conv) => {
     // Use the Actions on Google lib to respond to Google requests; for other requests use JSON
