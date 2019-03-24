@@ -17,6 +17,7 @@ var poultry = require('./poultry');
 var appliances = require('./appliances');
 var trains = require('./trains');
 var land = require('./land');
+var percap = require('./percap');
 
 const app = dialogflow({
     debug: true
@@ -314,6 +315,10 @@ app.intent('appliance_intent - followup', (conv, parameters) => {
 app.intent('land_intent', (conv, parameters) => {
     console.log("Parameters : ", parameters);
     return land.processRequest(conv, parameters);
+});
+
+app.intent('percap_intent', (conv, parameters) => {
+    return percap.processRequest(conv, parameters);
 });
 
 
