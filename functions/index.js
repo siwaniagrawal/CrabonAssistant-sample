@@ -5,7 +5,8 @@ const {
     Permission,
     Suggestions,
     BasicCard,
-    SimpleResponse
+    SimpleResponse,
+    List
 } = require('actions-on-google'); // Google Assistant helper library
 const requestLib = require('request');
 var config = require('./config');
@@ -311,9 +312,53 @@ app.intent('appliance_intent - followup', (conv, parameters) => {
         return appliances.processRequest(conv, newParams, false);
 });
 
-app.intent('land_intent', (conv, parameters) => {
-    console.log("Parameters : ", parameters);
-    return land.processRequest(conv, parameters);
+app.intent('land_intent', (conv, parameters, option) => {
+    if (parameters.land_type === ""){
+        if (conv.surface.capabilities.has('actions.capability.SCREEN_OUTPUT')) {
+          // Create a list
+            let dataArr = ["Cropland", "Grassland", "Forest land", "Burning biomass"];
+            let items = {};
+            
+            dataArr.forEach(element => {
+                items[element] = { // key
+                title: element
+                // optional: array of synonyms, description, image
+                }
+            });
+            conv.ask('This is the list of land types Please choose one So, that I can provide you the exact value of the emission.');
+            conv.ask(new List({
+                title: "Land Types List",
+                items: items
+            }));
+        }
+        conv.user.storage.lastParams = parameters;
+    } else {
+        return land.processRequest(conv, parameters);
+    }
+});
+app.intent('land_emission_intent',(conv,parameters,option) => {
+
+    console.log("Option : ", option);
+    console.log("last params : ", conv.user.storage.lastParams);
+
+    let contextParams = conv.user.storage.lastParams;
+    let newParams = {};
+    
+    if (parameters.land_region && parameters.land_region !== "")
+        newParams.land_region = parameters.land_region;
+    else
+        newParams.land_region = contextParams.land_region;
+
+    
+    if (parameters.land_type && parameters.land_type !== "")
+        newParams.land_type = parameters.land_type;
+    else if(option)
+        newParams.land_type = option;
+    else
+        newParams.land_type = contextParams.land_type;
+    conv.user.storage.lastParams = newParams;
+
+    return land.processRequest(conv, newParams, option);
 });
 
 

@@ -3,31 +3,14 @@ const requestLib = require('request');
 const utils = require('./utils');
 const path=require('path');
 
-const fs = require('fs');
 
 exports.processRequest = function(conv, parameters) {
     return new Promise(function(resolve, reject) {
+        
         if (parameters.land_region !== "") {
             let land_region = parameters.land_region;
             let land_type = parameters.land_type;
-            let land_types = []
-            if (parameters.land_type === ""){
-             
-                fs.readFile(path.join(__dirname, './assets/raw_data_land_chips.json'), function(err, data) {
-                    if (err) {
-                        return console.log(err);
-                    }
-                    console.log("data: ", JSON.parse(data));
-                    data = JSON.parse(data);
-                    data.forEach((obj) => {
-                        console.log("land", obj.land);
-                        land_types.push(obj.land);
-                    });
-                    utils.responseWithSuggestions(conv, "Please select from the following types of lands", land_types);
-                    resolve();
-                    return;
-                });
-            }
+            
             var options = {
                 uri: config.endpoint + "/land",
                 method: 'POST',
@@ -67,9 +50,9 @@ exports.processRequest = function(conv, parameters) {
                   resolve();
                 }
             });
-
+        
         } else {
-            conv.ask("Sorry, need a valid country name and land type. Could you please repeat your question with correct information?");
+            conv.ask("Sorry, need a valid country name. Could you please repeat your question with correct information?");
             resolve();
         }
     });
