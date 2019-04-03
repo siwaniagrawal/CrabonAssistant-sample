@@ -5,6 +5,7 @@ const {
     Permission,
     Suggestions,
     BasicCard,
+    RegisterUpdate,
     SimpleResponse
 } = require('actions-on-google'); // Google Assistant helper library
 const requestLib = require('request');
@@ -341,9 +342,10 @@ app.intent('reduceEmission_intent', (conv) => {
                 }
             ]
         }));
+        conv.ask('I can send you those updates daily. Would you like that?');
+        conv.ask(new Suggestions('Send daily'));     
     }
-        
-    
+     
 });
 app.intent('reduceFood_intent', (conv) => {
     //google home
@@ -374,7 +376,20 @@ app.intent('reduceFood_intent', (conv) => {
         
     
 });
-
+app.intent("Setup Daily Updates", conv => {
+    // Request to register Daily Updates
+    conv.ask(new RegisterUpdate({
+        intent: "reduceFood_intent",
+        frequency: "DAILY"
+    }));
+});
+app.intent("Finish Daily Updates Setup", (conv, params, registered) => {
+    if (registered && registered.status === "OK") {
+        conv.close("Ok, I'll start giving you daily updates. See you again.");
+    } else {
+        reply(conv, "Feel free to register daily updates. When do you want to know the about how to reduce emission?");
+    }
+})
 
 // The default fallback intent has been matched, try to recover (https://dialogflow.com/docs/intents#fallback_intents)
 app.intent('Default Fallback Intent', (conv) => {
