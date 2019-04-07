@@ -1,6 +1,7 @@
 var config = require('./config')
 const requestLib = require('request');
 const utils = require('./utils');
+const {Suggestions} = require('actions-on-google');
 
 exports.processRequest = function(conv, parameters) {
     return new Promise(function(resolve, reject) {
@@ -8,9 +9,10 @@ exports.processRequest = function(conv, parameters) {
             let poultry_type = parameters.poultry_type;
             let poultry_region = "Default",
                 poultry_quantity = 1;
-
+            
             if (parameters.poultry_region !== "")
                 poultry_region = parameters.poultry_region;
+               
 
             if (parameters.poultry_quantity !== "")
                 poultry_quantity = parameters.poultry_quantity;

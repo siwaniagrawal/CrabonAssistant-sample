@@ -44,6 +44,15 @@ app.intent('Default Welcome Intent', (conv) => {
     }
 });
 
+app.intent('actions.intent.OPTION', (conv, parameters, option) => {
+    console.log("");
+    let response = 'You did not select any item';
+    if (option) {
+      response = "Hoorah! You selected " + option;
+    }
+    conv.ask(response); 
+});
+
 app.intent('request_permission', (conv) => {
     const options = {
         context: `Hello, Welcome to CarbonFootPrint Action! To address you by name and provide you relatable emission comparisons based on your location`,
@@ -253,8 +262,104 @@ app.intent('electricity_intent', (conv, parameters) => {
     return electricity.processRequest(conv, parameters);
 });
 
-app.intent('poultry_intent', (conv, parameters) => {
-    return poultry.processRequest(conv, parameters);
+app.intent('poultry_intent', (conv, parameters, option) => {
+    if (parameters.poultry_type === ""){
+            let dataArr = ["egg", "lamp", "beef", "turkey", "broiler chicken", "pork"];
+            let items = {};
+            
+            dataArr.forEach(element => {
+                items[element] = { // key
+                title: element
+                // optional: array of synonyms, description, image
+                }
+            });
+            conv.ask('This is the list of poultry types Please choose one So, that I can provide you the exact value of the emission.');
+            conv.ask(new List({
+                title: "Poultry Types List",
+                items: items
+            }));
+
+        conv.user.storage.lastParams = parameters;
+        
+        console.log("parametersfinal:", parameters);
+    } else {
+        return poultry.processRequest(conv, parameters);
+    }
+});
+
+app.intent('poultry_region_list?',(conv, parameters,option) => {
+    parameters.poultry_type=option;
+    if (parameters.poultry_region === ""){
+        if (conv.surface.capabilities.has('actions.capability.SCREEN_OUTPUT')) {
+            conv.ask("do you want to provide region name?")
+            conv.ask(new Suggestions(`provide poultry region`));
+            conv.ask(new Suggestions('no poultry region'));
+        }
+        conv.user.storage.lastParams = parameters;
+        
+    } else {
+        return poultry.processRequest(conv, parameters);
+    }
+    console.log("final2 parameters", parameters);
+});
+
+app.intent('poultry_region_list? - yes', (conv, parameters, option) => {
+    parameters.poultry_type=conv.user.storage.lastParams.poultry_type;
+    if (parameters.poultry_region === ""){
+        
+        if (conv.surface.capabilities.has('actions.capability.SCREEN_OUTPUT')) {
+          // Create a list
+            let dataArr = ["ohio", "idaho", "michigan"];
+            let items = {};
+            
+            dataArr.forEach(element => {
+                items[element] = { // key
+                title: element
+                // optional: array of synonyms, description, image
+                }
+            });
+            conv.ask('This is the list of poultry regions Please choose one So, that I can provide you the exact value of the emission.');
+            conv.ask(new List({
+                title: "Poultry Regions List",
+                items: items
+            }));
+
+        }
+        conv.user.storage.lastParams = parameters;
+        
+        console.log("parametersfinal:", parameters,"region option",option,"lastparams", conv.user.storage.lastParams);
+    } else {
+        return poultry.processRequest(conv, parameters);
+    }
+});    
+
+app.intent('poultry_emission1',(conv,parameters,option) => {
+
+    let contextParams = conv.user.storage.lastParams;
+    let newParams = {};
+    
+    if (parameters.poultry_region && parameters.poultry_region !== "")
+        newParams.poultry_region = parameters.poultry_region;
+    else if(option)
+        newParams.poultry_region = option;
+    else
+        newParams.poultry_region = contextParams.poultry_region;
+    
+    if (parameters.poultry_quantity && parameters.poultry_quantity !== "")
+        newParams.poultry_quantity = parameters.poultry_quantity;
+    else
+        newParams.poultry_quantity = contextParams.poultry_quantity;    
+
+    
+    if (parameters.poultry_type && parameters.poultry_type !== "")
+        newParams.poultry_type = parameters.poultry_type;
+    // else if(option)
+    //     newParams.poultry_type = option;
+    else
+        newParams.poultry_type = contextParams.poultry_type;
+    conv.user.storage.lastParams = newParams;
+
+    return poultry.processRequest(conv, newParams, option);
 });
 
 app.intent('appliance_intent', (conv, parameters) => {
